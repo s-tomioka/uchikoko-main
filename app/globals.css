@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #fdf5ef;
+  --orange: #e38056;
+  --text-dark: #242424;
+  --salmon: #da9e88;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+}
+
+@media (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+}
