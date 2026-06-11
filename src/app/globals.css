@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --c-white: #FFFFFF;
+  --c-bg: #FFFFFF;
+  --c-bg-subtle: #FAF9F7;
+  --c-bg-warm: #F5F3EF;
+  --c-text: #1A1A1A;
+  --c-text-sub: #555555;
+  --c-text-muted: #8A8A8A;
+  --c-text-faint: #B5B5B5;
+  --c-border: #EAEAE8;
+  --c-border-faint: #F2F1EF;
+  --c-placeholder: #EDE9E3;
+  --c-dark: #1A1A1A;
+  --c-accent: #C4A882;
+  --c-line: #06C755;
+  /* next/font の外部取得を避け、表示のブロックを防ぐ（日本語は OS 標準フォント） */
+  --font-noto-sans-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, "Yu Gothic", "Yu Gothic Medium", sans-serif;
+}
+
+@theme inline {
+  --color-white: var(--c-white);
+  --color-background: var(--c-bg);
+  --color-bg-subtle: var(--c-bg-subtle);
+  --color-bg-warm: var(--c-bg-warm);
+  --color-foreground: var(--c-text);
+  --color-text-sub: var(--c-text-sub);
+  --color-text-muted: var(--c-text-muted);
+  --color-text-faint: var(--c-text-faint);
+  --color-border: var(--c-border);
+  --color-border-faint: var(--c-border-faint);
+  --color-placeholder: var(--c-placeholder);
+  --color-dark: var(--c-dark);
+  --color-accent: var(--c-accent);
+  --color-line: var(--c-line);
+  --font-sans: var(--font-noto-sans-jp);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--c-accent);
+  color: white;
+}
+
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+
+@media (max-width: 768px) {
+  .container { padding-inline: 24px; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+/* Page transition */
+/* opacity のみ（祖先に transform を残さない — position:fixed のヘッダーがビューポート基準になるため） */
+@keyframes page-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.page-enter {
+  animation: page-fade 0.45s ease-out both;
+}
+
+/* Scroll fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes hero-examples-tab-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-examples-tab-panel {
+  animation: hero-examples-tab-fade-up 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-examples-tab-panel {
+    animation: none;
+  }
+}

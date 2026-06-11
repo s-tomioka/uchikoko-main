@@ -1,28 +1,42 @@
 {
-  "name": "uchi-koko-pet-memorial",
+  "name": "uchikoko",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:4000": "next dev -p 4000",
+    "dev": "next dev -H 127.0.0.1 -p 3001 --webpack",
+    "dev:turbo": "next dev -H 127.0.0.1 -p 3001",
     "build": "next build",
-    "start": "next start",
-    "start:4000": "next start -p 4000",
-    "preview": "next build && next start -p 4000",
-    "lint": "next lint"
+    "start": "next start -H 127.0.0.1 -p 3001",
+    "preview": "next start -H 127.0.0.1 -p 3001",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "next": "14.2.18",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@vercel/blob": "^2.4.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resend": "^6.12.3",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
-    "typescript": "^5"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.7"
   }
 }
