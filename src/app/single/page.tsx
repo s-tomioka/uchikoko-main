@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { SetGallery } from "@/components/sections/sets/set-gallery";
 import { setsData } from "@/lib/sets-data";
-import { LINE_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata = {
@@ -202,24 +201,6 @@ export default function SinglePage() {
               よくある質問
             </h2>
             <FaqAccordion items={product.faq} />
-          </div>
-        </section>
-
-        {/* LINE CTA */}
-        <section className="fade-up">
-          <div className="container py-16 text-center md:py-20">
-            <p className="mb-8 text-[13px] leading-[2.2] tracking-wide text-text-muted">
-              ご不明な点はお気軽にお問い合わせください。
-            </p>
-            <Button
-              href={LINE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              className="bg-line px-12 text-white hover:bg-line/85 active:bg-line/90"
-            >
-              LINEで無料相談
-            </Button>
           </div>
         </section>
       </main>
