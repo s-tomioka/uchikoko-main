@@ -58,19 +58,10 @@ export function HeroSection() {
               </p>
               <div className="flex flex-wrap gap-3 max-md:justify-center md:justify-start">
                 <Button
-<<<<<<< HEAD
-                  href={LINE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="primary"
-                  className="bg-line text-white hover:bg-line/85 active:bg-line/90"
-             
-=======
                   href="/single"
                   variant="primary"
                   className="bg-white text-foreground hover:bg-white/85 active:bg-white/90"
                 >
->>>>>>> develop
                   注文する
                 </Button>
               </div>
