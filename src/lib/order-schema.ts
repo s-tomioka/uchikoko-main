@@ -14,6 +14,7 @@ export const customerSchema = z.object({
     .regex(/^\d{3}-?\d{4}$/, '有効な郵便番号を入力してください（例：100-0001）'),
   prefecture: z.string().min(1, '都道府県を入力してください'),
   addressLine: z.string().min(1, '住所を入力してください'),
+  memo: z.string().max(1000, 'メモは1000文字以内で入力してください').optional(),
 })
 
 export const orderSchema = customerSchema.extend({
