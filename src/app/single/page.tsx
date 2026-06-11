@@ -15,7 +15,7 @@ export const metadata = {
 
 const product = setsData["single"];
 
-const galleryImages = [1, 3, 4].map((n) => {
+const galleryImages = [1, 2, 4].map((n) => {
   const num = String(n).padStart(2, "0");
   return {
     src: `/images/detail/single/hero/sets-a-hero-${num}.png`,
