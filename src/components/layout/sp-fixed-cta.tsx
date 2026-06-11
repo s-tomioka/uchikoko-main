@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { LINE_URL } from "@/lib/constants";
 
 const FIXED_CTA_PATHS = ["/"];
 
@@ -50,12 +49,10 @@ export function SpFixedCta() {
     >
       <div className="flex">
         <Link
-          href={LINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 bg-line py-3 text-center text-[11px] font-medium tracking-[0.06em] text-white transition-colors hover:bg-line/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 focus-visible:ring-offset-2"
+          href="/single"
+          className="flex-1 bg-dark py-3 text-center text-[11px] font-medium tracking-[0.06em] text-white transition-colors hover:bg-dark/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 focus-visible:ring-offset-2"
         >
-          LINEで無料相談
+          注文する
         </Link>
       </div>
     </div>

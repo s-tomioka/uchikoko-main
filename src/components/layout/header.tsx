@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LINE_URL } from "@/lib/constants";
 import { makeHashScrollHandler } from "@/lib/interactive";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -59,18 +58,6 @@ export function Header() {
           )}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[11px] tracking-[0.08em] bg-line text-white px-5 py-2.5 hover:bg-line/85 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 focus-visible:ring-offset-2"
-          >
-            LINEで無料相談
-          </Link>
-
-        </div>
-
         <button
           className="md:hidden p-2 -mr-2 text-text-muted hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
           onClick={() => setOpen(!open)}
@@ -106,15 +93,6 @@ export function Header() {
               ),
             )}
             <div className="pt-5 space-y-3">
-              <Link
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center text-[11px] tracking-wide text-white bg-line py-3 hover:bg-line/85 transition-all"
-                onClick={() => setOpen(false)}
-              >
-                LINEで無料相談
-              </Link>
               {isTopPage ? (
                 <Link
                   href="/#sets"

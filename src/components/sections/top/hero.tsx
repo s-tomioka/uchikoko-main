@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { HeroExamples } from "@/components/sections/top/hero-examples";
-import { LINE_URL } from "@/lib/constants";
 
 const HERO_IMAGE_PC = "/images/top/hero/top-hero.png";
 const HERO_IMAGE_SP = "/images/top/hero/top-hero-sp.png";
@@ -34,9 +33,9 @@ export function HeroSection() {
             <div className="max-w-md max-md:mx-auto max-md:text-center md:-ml-8 md:text-left">
               <h1 className="mb-6 text-[28px] font-extralight leading-[1.5] tracking-[0.04em] text-white md:text-[38px]">
                 <span className="md:hidden">
-                  大切なうちの子に
+                  大切なうちの子と、
                   <br />
-                  毎日手を合わせる
+                  ずっと一緒に。
                 </span>
                 <span className="hidden md:block">
                   大切なうちの子と、
@@ -59,12 +58,19 @@ export function HeroSection() {
               </p>
               <div className="flex flex-wrap gap-3 max-md:justify-center md:justify-start">
                 <Button
+<<<<<<< HEAD
                   href={LINE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="primary"
                   className="bg-line text-white hover:bg-line/85 active:bg-line/90"
              
+=======
+                  href="/single"
+                  variant="primary"
+                  className="bg-white text-foreground hover:bg-white/85 active:bg-white/90"
+                >
+>>>>>>> develop
                   注文する
                 </Button>
               </div>
