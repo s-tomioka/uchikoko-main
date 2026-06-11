@@ -47,6 +47,7 @@ function buildShopHtml(o: OrderFields, signedPhotoUrls: string[], orderId: strin
   <tr><th style="text-align:left;padding:4px 12px 4px 0">郵便番号</th><td>${escapeHtml(o.postalCode)}</td></tr>
   <tr><th style="text-align:left;padding:4px 12px 4px 0">都道府県</th><td>${escapeHtml(o.prefecture)}</td></tr>
   <tr><th style="text-align:left;padding:4px 12px 4px 0">住所</th><td>${escapeHtml(o.addressLine)}</td></tr>
+  <tr><th style="text-align:left;padding:4px 12px 4px 0">メモ</th><td>${o.memo ? escapeHtml(o.memo).replace(/\n/g, '<br>') : '（なし）'}</td></tr>
   <tr><th style="text-align:left;padding:4px 12px 4px 0">商品</th><td>${escapeHtml(o.productName)}</td></tr>
   <tr><th style="text-align:left;padding:4px 12px 4px 0">金額</th><td>${escapeHtml(o.price)}（${escapeHtml(o.priceNote)}）</td></tr>
 </table>
