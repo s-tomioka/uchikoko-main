@@ -39,15 +39,15 @@ export function HeroSection() {
                   毎日手を合わせる
                 </span>
                 <span className="hidden md:block">
-                  大切なうちの子に、
+                  大切なうちの子と、
                   <br />
-                  毎日手を合わせる。
+                  ずっと一緒に。
                 </span>
               </h1>
               <p className="mb-10 max-md:mb-6 text-[13px] leading-[2] tracking-wide text-white md:text-[14px]">
                 写真を送るだけで世界にひとつだけの
                 <br />
-                ペット仏壇をお届けします。
+                陶磁器製のペットフィギュアをお届けします。
               </p>
               <p className="mb-8 text-[20px] font-extralight tracking-[0.06em] text-white md:text-[24px] max-md:flex max-md:flex-col max-md:items-center">
                 <span className="inline-flex items-baseline gap-2">
@@ -64,14 +64,7 @@ export function HeroSection() {
                   rel="noopener noreferrer"
                   variant="primary"
                   className="bg-line text-white hover:bg-line/85 active:bg-line/90"
-                >
-                  LINEで無料相談
-                </Button>
-                <Button
-                  href="/single"
-                  variant="primary"
-                  className="bg-white text-foreground hover:bg-white/85 active:bg-white/90"
-                >
+             
                   注文する
                 </Button>
               </div>
@@ -87,7 +80,7 @@ export function HeroSection() {
             <br className="hidden md:block" />
             瀬戸焼の老舗工房で一点ずつ丁寧に制作し、
             <br className="hidden md:block" />
-            仏壇・位牌・供養小物とまとめて揃えることで、
+            お部屋や寝室に飾るだけで、
             <br className="hidden md:block" />
             あなたの暮らしの中に、祈りの空間をつくります。
           </p>
