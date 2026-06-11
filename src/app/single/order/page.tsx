@@ -47,6 +47,7 @@ export default function SingleOrderPage() {
     postalCode: "",
     prefecture: "",
     addressLine: "",
+    memo: "",
   });
   const [zipLookupMsg, setZipLookupMsg] = useState<string | null>(null);
   const [zipLookupLoading, setZipLookupLoading] = useState(false);
@@ -130,6 +131,7 @@ export default function SingleOrderPage() {
       fd.append("postalCode", customer.postalCode);
       fd.append("prefecture", customer.prefecture);
       fd.append("addressLine", customer.addressLine);
+      fd.append("memo", customer.memo);
       fd.append("productName", `${product.name}（${selectedSize}）`);
       fd.append("price", priceForSize(selectedSize));
       fd.append("priceNote", product.priceNote);
@@ -314,6 +316,20 @@ export default function SingleOrderPage() {
                     className="w-full resize-y rounded-sm border border-border bg-white px-3 py-2.5 text-[13px] leading-relaxed tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
                   />
                   {fieldErrors.addressLine && <p className="mt-1 text-[12px] text-red-600">{fieldErrors.addressLine}</p>}
+                </div>
+                <div>
+                  <label htmlFor="cust-memo" className="mb-1.5 block text-[12px] tracking-wide text-text-sub">
+                    メモ（任意）
+                  </label>
+                  <textarea
+                    id="cust-memo"
+                    rows={4}
+                    value={customer.memo}
+                    onChange={(e) => setCustomer((c) => ({ ...c, memo: e.target.value }))}
+                    placeholder="ご要望やご質問などがございましたらご記入ください。"
+                    className="w-full resize-y rounded-sm border border-border bg-white px-3 py-2.5 text-[13px] leading-relaxed tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
+                  />
+                  {fieldErrors.memo && <p className="mt-1 text-[12px] text-red-600">{fieldErrors.memo}</p>}
                 </div>
               </div>
               <p className="mt-6 text-[11px] leading-[1.85] tracking-wide text-text-muted">
@@ -565,6 +581,7 @@ export default function SingleOrderPage() {
                     <li>郵便番号：{customer.postalCode}</li>
                     <li>都道府県：{customer.prefecture}</li>
                     <li>市区町村・番地等：{customer.addressLine}</li>
+                    {customer.memo && <li>メモ：{customer.memo}</li>}
                   </ul>
                 </div>
 
