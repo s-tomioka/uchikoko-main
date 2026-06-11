@@ -56,7 +56,7 @@ export function HeroSection() {
                   </span>
                 </span>
               </p>
-              <div className="flex flex-wrap gap-3 max-md:justify-center md:justify-start">
+              <div className="flex flex-wrap gap-3 max-md:mt-8 max-md:justify-center md:justify-start">
                 <Button
                   href="/single"
                   variant="primary"
