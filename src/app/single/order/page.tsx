@@ -25,15 +25,11 @@ const product = setsData["single"];
 
 const sizeOptions = [
   { value: "8cm", label: "8cm — ¥54,000" },
-  { value: "18cm", label: "18cm — ¥55,000" },
-  { value: "21cm", label: "21cm — ¥66,000" },
 ];
 
 function priceForSize(size: string) {
   const map: Record<string, string> = {
     "8cm": "¥54,000",
-    "18cm": "¥55,000",
-    "21cm": "¥66,000",
   };
   return map[size] ?? "¥54,000";
 }

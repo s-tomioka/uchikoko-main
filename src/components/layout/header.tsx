@@ -8,10 +8,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/#sets", label: "商品一覧" },
   { href: "/#workshop", label: "うちここについて" },
-  { href: "/#cases", label: "ご自宅の事例" },
-  { href: "/#faq", label: "よくある質問" },
 ];
 
 export function Header() {
@@ -93,23 +90,13 @@ export function Header() {
               ),
             )}
             <div className="pt-5 space-y-3">
-              {isTopPage ? (
-                <Link
-                  href="/#sets"
-                  className="block text-center text-[11px] tracking-wide text-white bg-dark py-3 hover:bg-dark/85 transition-all"
-                  onClick={makeHashScrollHandler("/#sets", () => setOpen(false))}
-                >
-                  注文する
-                </Link>
-              ) : (
-                <a
-                  href="/#sets"
-                  className="block text-center text-[11px] tracking-wide text-white bg-dark py-3 hover:bg-dark/85 transition-all"
-                  onClick={() => setOpen(false)}
-                >
-                  注文する
-                </a>
-              )}
+              <Link
+                href="/single"
+                className="block text-center text-[11px] tracking-wide text-white bg-dark py-3 hover:bg-dark/85 transition-all"
+                onClick={() => setOpen(false)}
+              >
+                注文する
+              </Link>
             </div>
           </div>
         </div>

@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/single", label: "オリジナルペット陶器のみ" },
-  { href: "/#faq", label: "よくある質問" },
   { href: "/contact", label: "お問い合わせ" },
   { href: "/privacy", label: "プライバシーポリシー" },
   { href: "/tokusho", label: "特定商取引法に基づく表記" },
@@ -17,9 +15,6 @@ export function Footer() {
             <div className="mb-3">
               <img src="/uchikoko_logo.svg" alt="うちここ" width={100} height={39} style={{ filter: "brightness(0) invert(1)" }} />
             </div>
-            <p className="max-w-[260px] text-[11px] leading-[2] tracking-wide text-white/60">
-              写真からつくる陶器のオブジェ「うちここ」と、供養空間をまとめて揃えられるサービスです。
-            </p>
           </div>
           <div className="flex flex-col gap-3">
             {links.map((link) => (

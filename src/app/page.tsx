@@ -6,11 +6,9 @@ import { Footer } from "@/components/layout/footer";
 import { SpFixedCta } from "@/components/layout/sp-fixed-cta";
 import { HeroSection } from "@/components/sections/top/hero";
 import { EmpathySection } from "@/components/sections/top/empathy";
-import { CasesSection } from "@/components/sections/top/cases";
 import { WorkshopSection } from "@/components/sections/top/workshop";
 import { FeatureSection } from "@/components/sections/top/feature";
 import { ProductionFlowSection } from "@/components/sections/top/production-flow";
-import { FaqSection } from "@/components/sections/top/faq";
 import { BottomCtaSection } from "@/components/sections/top/bottom-cta";
 
 export default function Home() {
@@ -38,11 +36,9 @@ export default function Home() {
       <main className="flex-1 pb-16 md:pb-0">
         <HeroSection />
         <EmpathySection />
-        <CasesSection />
         <WorkshopSection />
         <FeatureSection />
         <ProductionFlowSection />
-        <FaqSection />
         <BottomCtaSection />
       </main>
       <Footer />

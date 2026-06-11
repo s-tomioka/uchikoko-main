@@ -28,10 +28,10 @@ export function HeroSection() {
           sizes="100vw"
           className="hidden object-cover md:block"
         />
-        <div className="absolute inset-0 flex items-start pt-20">
+        <div className="absolute inset-0 flex items-start pt-8 md:pt-20">
           <div className="container">
             <div className="max-w-md max-md:mx-auto max-md:text-center md:-ml-8 md:text-left">
-              <h1 className="mb-6 text-[28px] font-extralight leading-[1.5] tracking-[0.04em] text-white md:text-[38px]">
+              <h1 className="mb-4 md:mb-6 text-[24px] font-extralight leading-[1.4] tracking-[0.04em] text-white md:text-[38px] md:leading-[1.5]">
                 <span className="md:hidden">
                   大切なうちの子と、
                   <br />
@@ -43,12 +43,12 @@ export function HeroSection() {
                   ずっと一緒に。
                 </span>
               </h1>
-              <p className="mb-10 max-md:mb-6 text-[13px] leading-[2] tracking-wide text-white md:text-[14px]">
+              <p className="mb-4 md:mb-6 text-[12px] leading-[1.9] tracking-wide text-white md:text-[14px] md:leading-[2]">
                 写真を送るだけで世界にひとつだけの
                 <br />
                 陶磁器製のペットフィギュアをお届けします。
               </p>
-              <p className="mb-8 text-[20px] font-extralight tracking-[0.06em] text-white md:text-[24px] max-md:flex max-md:flex-col max-md:items-center">
+              <p className="mb-4 md:mb-8 text-[18px] font-extralight tracking-[0.06em] text-white md:text-[24px] max-md:flex max-md:flex-col max-md:items-center">
                 <span className="inline-flex items-baseline gap-2">
                   <span>¥54,000</span>
                   <span className="text-[12px] tracking-wide text-white md:text-[13px]">
